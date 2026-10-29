@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="nb" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Rørlegger i Bergen | Bergen Varme &amp; Sanitær AS (utkast)</title>
+  <meta name="description" content="Rørleggermesterbedrift i Bergen og omegn med over 30 års erfaring. Bad og våtrom med fastpris, vannbåren varme, avløp og prosjekter for bygg og næring. Gratis befaring.">
+  <meta name="theme-color" content="#F2F4F3">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23F2F4F3'/%3E%3Cpath d='M8 26V12l8-5 8 5' fill='none' stroke='%23C8312B' stroke-width='3'/%3E%3Cpath d='M16 26V16l8-4' fill='none' stroke='%232A62A8' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Rørtegningen tegnes bare første gang i en økt, og venter til den er synlig.
+    document.documentElement.classList.remove('no-js');
+    var seen = false;
+    try { seen = !!sessionStorage.getItem('bvs-intro'); } catch (e) {}
+    document.documentElement.classList.add(seen ? 'intro-seen' : 'draw-wait');
+    // Reserve: lastes ikke script.js, vises tegningen likevel
+    window.addEventListener('load', function () {
+      if (!window.bvsDrawing) document.documentElement.classList.remove('draw-wait');
+    });
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#innhold">Hopp til innhold</a>
+
+  <p class="draft">Utkast fra Northweb: forslag til ny nettside for <span translate="no">Bergen Varme&nbsp;&amp;&nbsp;Sanitær&nbsp;AS</span>. Ikke publisert.</p>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top" aria-label="Bergen Varme &amp; Sanitær, til toppen">
+        <span class="wordmark-name" translate="no">Bergen Varme&nbsp;&amp;&nbsp;Sanitær</span>
+        <span class="wordmark-sub">Rørleggermesterbedrift</span>
+      </a>
+      <a class="header-call" href="tel:+4793400277">Ring oss</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hovedmeny">Meny</button>
+      <nav class="site-nav" id="hovedmeny" aria-label="Hovedmeny">
+        <ul>
+          <li><a href="#tjenester">Tjenester</a></li>
+          <li><a href="#slik-jobber-vi">Slik jobber vi</a></li>
+          <li><a href="#om-oss">Om oss</a></li>
+          <li><a href="#bestill">Bestill befaring</a></li>
+          <li class="nav-call"><a class="header-call" href="tel:+4793400277">Ring oss</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="innhold">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <h1 id="hero-title">Vi tegner badet ditt før vi bygger det.</h1>
+        <p class="lead">Rørlegger for private og bedrifter i Bergen og omegn, med over 30 års erfaring. Du får skisse, tidsramme og pris før jobben starter.</p>
+        <p class="credentials">Sentralt godkjent og medlem av Rørentreprenørene Norge.</p>
+      </div>
+
+      <figure class="hero-figure">
+        <svg class="drawing" viewBox="0 0 420 330" role="img" aria-labelledby="drawing-title">
+          <title id="drawing-title">Strektegning av et rørsystem: varmtvannsbereder, servant og sluk, koblet sammen med rør for varmt vann, kaldt vann og avløp.</title>
+
+          <g class="legend" aria-hidden="true">
+            <line x1="8" y1="14" x2="28" y2="14" class="ln-hot"/>
+            <text x="34" y="18">Varmt vann</text>
+            <line x1="8" y1="32" x2="28" y2="32" class="ln-cold"/>
+            <text x="34" y="36">Kaldt vann</text>
+            <line x1="8" y1="50" x2="28" y2="50" class="ln-waste"/>
+            <text x="34" y="54">Avløp</text>
+          </g>
+
+          <g class="fixtures" aria-hidden="true">
+            <!-- Varmtvannsbereder -->
+            <ellipse class="draw d1" pathLength="1" cx="110" cy="70" rx="34" ry="13"/>
+            <path class="draw d1" pathLength="1" d="M76 70 V190 A34 13 0 0 0 144 190 V70"/>
+            <!-- Servant -->
+            <path class="draw d2" pathLength="1" d="M260 120 L300 97 L340 120 L300 143 Z"/>
+            <path class="draw d2" pathLength="1" d="M260 120 V132 L300 155 L340 132 V120"/>
+            <!-- Sluk -->
+            <ellipse class="draw d3" pathLength="1" cx="330" cy="272" rx="22" ry="9"/>
+            <ellipse class="draw d3" pathLength="1" cx="330" cy="272" rx="11" ry="4.5"/>
+          </g>
+
+          <g aria-hidden="true">
+            <path class="pipe pipe-waste p1" d="M300 155 V253 L321 265"/>
+            <path class="pipe pipe-cold p2" pathLength="1" d="M420 222 L360 187 V152 L340 140"/>
+            <path class="pipe pipe-cold p3" pathLength="1" d="M360 187 L300 222 L144 132"/>
+            <path class="pipe pipe-hot p4" pathLength="1" d="M110 57 V50 L177 11 L300 82 V97"/>
+            <path class="pipe pipe-hot p5" pathLength="1" d="M100 194 V230 L4 285 V330"/>
+          </g>
+
+          <g class="labels" aria-hidden="true">
+            <line x1="146" y1="92" x2="156" y2="92"/>
+            <text x="160" y="96">Varmtvannsbereder</text>
+            <line x1="342" y1="114" x2="352" y2="108"/>
+            <text x="355" y="108">Servant</text>
+            <line x1="352" y1="276" x2="362" y2="284"/>
+            <text x="365" y="292">Sluk</text>
+          </g>
+        </svg>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#bestill">Bestill befaring</a>
+          <a class="btn btn-secondary" href="tel:+4793400277">Ring 934 00 277</a>
+        </div>
+        <figcaption class="hero-note">Befaringen er gratis og uforpliktende. Vi har åpent mandag til fredag, 08–16.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section wrap" id="slik-jobber-vi" aria-labelledby="steps-title">
+      <h2 id="steps-title">Slik jobber vi</h2>
+      <ol class="steps">
+        <li>
+          <h3>Befaring</h3>
+          <p>Vi kommer på befaring og ser på jobben. Det er gratis og uforpliktende.</p>
+        </li>
+        <li>
+          <h3>Skisse og pris</h3>
+          <p>Du får en skisse av jobben, en beskrivelse av oppdraget, en tidsramme og en pris. For bad gir vi fastpris.</p>
+        </li>
+        <li>
+          <h3>Utførelse</h3>
+          <p>Vi koordinerer med elektriker, murer, snekker og maler.</p>
+        </li>
+        <li>
+          <h3>Dokumentasjon</h3>
+          <p>Når jobben er ferdig, får du full dokumentasjon på arbeidet.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section wrap" id="tjenester" aria-labelledby="services-title">
+      <h2 id="services-title">Tjenester</h2>
+      <div class="services">
+        <div class="service-group">
+          <h3>For deg som privatkunde</h3>
+          <ul class="service-list">
+            <li><strong>Bad og våtrom</strong> Vi tegner badet og gir deg fastpris. Vi sørger for nytt røropplegg og anbefaler fliser, innredning og materialer av god kvalitet.</li>
+            <li><strong>Rørleggertjenester</strong> Fra montering av et blandebatteri til utskifting eller fornying av rør.</li>
+            <li><strong>Vannbåren varme og gulvvarme</strong></li>
+            <li><strong>Minirenseanlegg</strong> Fra kapasitetsberegning og søknad til installasjon og vedlikeholdsavtale.</li>
+            <li><strong>Hytter</strong> Vi har lang erfaring med rørleggerarbeid på hytter.</li>
+            <li><strong>Serviceavtale</strong></li>
+          </ul>
+        </div>
+        <div class="service-group">
+          <h3>For bedrifter og utbyggere</h3>
+          <ul class="service-list">
+            <li><strong>Boligprosjekter</strong></li>
+            <li><strong>Sanitæranlegg</strong></li>
+            <li><strong>Totalentreprise for bygg og næring</strong></li>
+            <li><strong>Ombygging og rehabilitering</strong> Butikker, restauranter og andre næringslokaler.</li>
+            <li><strong>Avløpsanlegg</strong></li>
+            <li><strong>Rammeavtale</strong></li>
+          </ul>
+        </div>
+      </div>
+      <p class="shop-note">Trenger du produkter fra en rørleggerbutikk? <a href="#bestill">Ta kontakt</a>, så hjelper vi deg.</p>
+    </section>
+
+    <section class="section wrap" id="om-oss" aria-labelledby="about-title">
+      <div class="about">
+        <div class="about-text">
+          <h2 id="about-title">En rørleggermesterbedrift i Bergen</h2>
+          <p><span translate="no">Bergen Varme&nbsp;&amp;&nbsp;Sanitær&nbsp;AS</span> har over 30 års erfaring med rørleggertjenester for private og bedrifter. Vi utfører de fleste rørleggertjenester og ferdigstiller prosjektene effektivt og til avtalt tid.</p>
+          <p>Vi er sentralt godkjent, medlem av Rørentreprenørene Norge og <a href="https://mesterbedrifter.no/bedrift/35461/bergen-varme-sanitr-as" rel="noopener">registrert som mesterbedrift</a>.</p>
+        </div>
+        <ul class="people" aria-label="Kontaktpersoner">
+          <li class="person">
+            <h3>Ove Larsen</h3>
+            <p class="role">Daglig leder</p>
+            <p><a href="tel:+4793400277">934 00 277</a></p>
+            <p><a href="mailto:varmroe@online.no">varmroe@online.no</a></p>
+          </li>
+          <li class="person">
+            <h3>Torbjørn Espeland Olsen</h3>
+            <p class="role">Rørleggermester</p>
+            <p><a href="tel:+4793467183">934 67 183</a></p>
+            <p><a href="mailto:torbj.olsen@gmail.com">torbj.olsen@gmail.com</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section wrap" id="bestill" aria-labelledby="order-title">
+      <div class="order">
+        <div class="order-intro">
+          <h2 id="order-title">Bestill befaring</h2>
+          <p>Fortell kort hva jobben gjelder. Vi tar kontakt for å avtale tid og dato.</p>
+          <p>Du kan også ringe oss på <a href="tel:+4793400277">934 00 277</a>, mandag til fredag 08–16.</p>
+        </div>
+
+        <form class="form" id="order-form" novalidate>
+          <div class="field">
+            <label for="f-name">Navn</label>
+            <input id="f-name" name="navn" type="text" autocomplete="name" required>
+            <p class="error" id="f-name-error" hidden>Skriv inn navnet ditt.</p>
+          </div>
+          <div class="field">
+            <label for="f-phone">Telefon</label>
+            <input id="f-phone" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required placeholder="F.eks. 912 34 567">
+            <p class="error" id="f-phone-error" hidden>Skriv inn et telefonnummer med minst 8 sifre.</p>
+          </div>
+          <div class="field">
+            <label for="f-email">E-post <span class="optional">(valgfritt)</span></label>
+            <input id="f-email" name="epost" type="email" autocomplete="email" spellcheck="false" placeholder="F.eks. navn@eksempel.no">
+            <p class="error" id="f-email-error" hidden>Sjekk at e-postadressen er riktig.</p>
+          </div>
+          <div class="field">
+            <label for="f-address">Adresse for jobben</label>
+            <input id="f-address" name="adresse" type="text" autocomplete="street-address" placeholder="Gate, nummer og sted…">
+          </div>
+          <fieldset class="field choice">
+            <legend>Gjelder det</legend>
+            <label><input type="radio" name="kunde" value="privat" checked> Privat</label>
+            <label><input type="radio" name="kunde" value="bedrift"> Bedrift</label>
+          </fieldset>
+          <div class="field">
+            <label for="f-message">Hva gjelder jobben?</label>
+            <textarea id="f-message" name="melding" rows="4" required placeholder="F.eks. nytt bad, tett avløp eller ny varmtvannsbereder…"></textarea>
+            <p class="error" id="f-message-error" hidden>Skriv noen ord om jobben.</p>
+          </div>
+          <div class="field">
+            <label for="f-date">Ønsket dato <span class="optional">(valgfritt)</span></label>
+            <input id="f-date" name="dato" type="date">
+            <p class="error" id="f-date-error" hidden>Velg en dato fra og med i dag.</p>
+          </div>
+          <div class="field">
+            <label for="f-source">Hvor fant du oss? <span class="optional">(valgfritt)</span></label>
+            <select id="f-source" name="kilde">
+              <option value="">Velg</option>
+              <option>Anbefaling fra bekjente</option>
+              <option>Internett/Google</option>
+              <option>Facebook</option>
+              <option>Annet</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="submit">Send forespørsel</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="titleblock wrap" aria-label="Firmaopplysninger">
+    <dl>
+      <div class="tb-main"><dt>Firma</dt><dd translate="no">Bergen Varme&nbsp;&amp;&nbsp;Sanitær&nbsp;AS</dd></div>
+      <div><dt>Org.nr.</dt><dd>985 465 363</dd></div>
+      <div><dt>Åpningstid</dt><dd>Mandag–fredag 08–16</dd></div>
+      <div><dt>Telefon</dt><dd><a href="tel:+4793400277">934 00 277</a></dd></div>
+      <div><dt>Område</dt><dd>Bergen og omegn</dd></div>
+      <div class="tb-social"><dt>Følg oss</dt><dd><a href="https://www.facebook.com/R%C3%B8rlegger-100656395325438" rel="noopener">Facebook</a></dd></div>
+      <div class="tb-draft"><dt>Status</dt><dd>Utkast laget av Northweb, ikke publisert</dd></div>
+    </dl>
+  </footer>
+</body>
+</html>
